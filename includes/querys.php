@@ -101,34 +101,7 @@ function retorna_obras($municipio, $nome) {
     
 }
 
-/*
-function retorna_obras($municipio, $nome){
 
-    
-    //CRIAR CONEXÃO
-    $con = JFactory::getDBO();
-    //CHAMANDO O APPLICATION
-    $main = JFactory::getApplication();
-  
-    if (($municipio!="")&&($nome=="")){
-        $sql = "SELECT title, id FROM `dev_seinfra_k2_items` WHERE catid = 81 AND lower(extra_fields_search) LIKE lower('%$municipio%') ORDER BY publish_up";
-    }
-    if (($municipio=="")&&($nome!="")){
-        $sql = "SELECT nome, id_escola FROM `#__escolas_estaduais_alagoas` WHERE lower(nome) LIKE lower('%$nome%') ORDER BY nome";
-    }
-    if (($municipio!="")&&($nome!="")){
-        $sql = "SELECT nome, id_escola FROM `#__escolas_estaduais_alagoas` WHERE lower(nome) LIKE lower('%$nome%') AND municipio = '$municipio' ORDER BY nome";
-    }
-    
-    $con->setQuery($sql);
-    $objeto = $con->loadObjectList();
-    
-    for ($i=0;$i<sizeOf($objeto);$i++){
-        $mensagem.="<li><a href='/buscar-obras/".$objeto[$i]->id."'>".$objeto[$i]->title."</a></li>";
-    }
-    
-    return $mensagem;
-}*/
 
 
 ?>
